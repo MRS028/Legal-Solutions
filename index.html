@@ -3,76 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Solution</title>
-    <!-- Tailwind and daisyui -->
+    <title>Justice - Your Legal Solution</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/a78a932492.js" crossorigin="anonymous"></script>
-    <!-- EB Garamond Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .eb-garamond{
+        .font-eb-garamond {
             font-family: "EB Garamond", serif;
-            font-optical-sizing: auto;
-            }
-
+        }
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#B68C5A',
+                        'brand-dark-1': '#111',
+                        'brand-dark-2': '#414040',
+                        'brand-dark-3': '#707070',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="eb-garamond">
-        <header>
-            <!-- Navbar Section -->
-            <div class="navbar bg-base-100 lg:w-[98%]">
-                <div class="navbar-start">
-                  <a class="btn btn-ghost text-xl"><img src="images/business.png" alt="" class="w-5">Justice</a>
+<body class="font-poppins">
+    <header class="container mx-auto px-4 lg:px-8">
+        <nav class="navbar bg-base-100 py-6">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#cases">Cases</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div class="navbar-center hidden  lg:flex">
-                  <ul class="menu menu-horizontal px-1 text-xl font-bold">
-                    <li><a>Home</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Cases</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
-                  </ul>
-                </div>
-    
-                
-                <div class="navbar-end ">
-                  <a class="btn bg-[#B68C5A] font-bold">Free Consultation</a>
-                </div>
-              </div>
-              <!-- Hero Section -->
-              <div
-              class="hero min-h-screen mt-3 lg:mx-10 lg:w-[95%]"
-              style="background-image: url(images/banner.png);">
-              <div class="hero-overlay bg-opacity-60"></div>
-              <div class="hero-content text-neutral-content text-center">
-                <div class="text-center">
-                  <h1 class="mb-5 text-7xl font-bold">We Provide Effective <br>Legal Solutions</h1>
-                  <p class="mb-5 text-center">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. <br class="hidden lg:block">In deleniti eaque aut repudiandae et a id nisi.
-                  </p>
-                  <div class="space-x-2">
-                    <input type="text" name="" id="" class="rounded-[8px] h-11 lg:h-11 text-baset text-black lg:w-[500px] text-left" placeholder=" Search your service">
-                    <button class=" rounded-[8px] h-11 w-20 hover:bg-blue-400   bg-[#B68C5A] font-bold">Search</button>
-                  </div>
-                </div>
-              </div>
+                <a class="btn btn-ghost text-2xl lg:text-4xl font-eb-garamond font-extrabold"><img src="../images/logo2.png" alt="Justice Logo" class="w-8 lg:w-12">Justice</a>
             </div>
-              
-        </header>
-    <main>
-        <section class="my-20">
-            <div class="text-center mx-96">
-                <h1 class="font-bold text-5xl">The Legal Practice Area</h1>
-                <p class="pt-5  text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eius debitis tempore sapiente incidunt doloremque! Reiciendis esse voluptates iusto quis iste?</p>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base text-brand-dark-3 space-x-4">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+                    <li><a href="#cases">Cases <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+                    <li><a href="#blog">Blog <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+                    <li><a href="#contact">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
+                </ul>
             </div>
-
+            <div class="navbar-end">
+                <a class="btn bg-brand-primary text-white text-lg font-semibold px-7 hover:bg-[#a57b49]">Free Consultation</a>
+            </div>
+        </nav>
+        <section id="home" class="hero min-h-[calc(100vh-100px)] mt-3 rounded-lg" style="background-image: url(../images/banner.png); background-position: center;">
+            <div class="hero-overlay bg-gradient-to-t from-[#111111] to-[#11111133] rounded-lg"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-3xl">
+                    <h1 class="mb-5 text-4xl md:text-6xl lg:text-7xl font-extrabold font-eb-garamond">We Provide Effective <br>Legal Solutions</h1>
+                    <p class="mb-8 text-base text-gray-200">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <input type="text" placeholder="Search your services" class="input input-bordered w-full max-w-xs lg:max-w-md text-black" />
+                        <button class="btn bg-brand-primary text-white text-lg font-semibold border-none hover:bg-[#a57b49]">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto px-4 lg:px-8">
+        <section id="services" class="my-24 scroll-mt-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-eb-garamond text-5xl font-extrabold text-brand-dark-2">The Legal Practice Areas</h2>
+                <p class="pt-6 text-brand-dark-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 mt-16">
+                <div class="card bg-base-100 p-8 text-center border-b-2 md:border-r-2 border-gray-200 hover:bg-gray-50 transition">
+                    <figure><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Business Law" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Business Law</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card bg-base-100 p-8 text-center border-b-2 lg:border-r-2 border-gray-200 hover:bg-gray-50 transition bg-gradient-to-b from-[#F3F3F3] to-[#F3F3F3] shadow-lg">
+                    <figure><img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Criminal Law" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Criminal Law</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card bg-base-100 p-8 text-center border-b-2 md:border-r-2 lg:border-r-0 border-gray-200 hover:bg-gray-50 transition">
+                    <figure><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Child Support" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Child Support</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card bg-base-100 p-8 text-center border-b-2 lg:border-b-0 md:border-r-2 border-gray-200 hover:bg-gray-50 transition">
+                    <figure><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Education Law" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Education Law</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card bg-base-100 p-8 text-center border-b-2 md:border-b-0 lg:border-r-2 border-gray-200 hover:bg-gray-50 transition">
+                    <figure><img src="../images/divorce.png" alt="Divorce Law" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Divorce Law</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card bg-base-100 p-8 text-center border-gray-200 hover:bg-gray-50 transition">
+                    <figure><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Tax Law" /></figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title font-eb-garamond text-3xl font-extrabold text-brand-dark-2">Tax Law</h3>
+                        <p class="text-brand-dark-3 py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <div class="card-actions">
+                           <!-- <a href="#"><img src="https://i.ibb.co/wJv8XmC/Frame.png" alt="arrow" class="w-8"></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cases" class="my-24 scroll-mt-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-eb-garamond text-5xl font-extrabold text-brand-dark-2">What Our Client Say</h2>
+                <p class="pt-6 text-brand-dark-3">We pride ourselves on client satisfaction. Here are some of the experiences our clients have shared about their successful case resolutions.</p>
+            </div>
+            
+            <div class="carousel w-full min-h-[550px] mt-16 rounded-lg" style="background-image: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80); background-position: center;">
+                 <div id="slide1" class="carousel-item relative w-full">
+                    <div class="hero-overlay bg-black bg-opacity-60"></div>
+                    <div class="w-full text-center text-white p-10 flex flex-col justify-center items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-24 h-24 rounded-full border-4 border-brand-primary object-cover mb-4" />
+                        <h4 class="font-eb-garamond text-2xl font-bold">Awlad Hossain</h4>
+                        <p class="font-poppins mb-6">UI/UX Designer</p>
+                        <p class="max-w-2xl">"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words."</p>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="hero-overlay bg-black bg-opacity-60"></div>
+                    <div class="w-full text-center text-white p-10 flex flex-col justify-center items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-24 h-24 rounded-full border-4 border-brand-primary object-cover mb-4" />
+                        <h4 class="font-eb-garamond text-2xl font-bold">Farhana Islam</h4>
+                        <p class="font-poppins mb-6">Software Engineer</p>
+                        <p class="max-w-2xl">"The team at Justice was incredibly professional and supportive throughout my entire case. Their expertise in business law was evident, and they secured a favorable outcome I didn't think was possible. Highly recommended for any legal needs."</p>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="hero-overlay bg-black bg-opacity-60"></div>
+                     <div class="w-full text-center text-white p-10 flex flex-col justify-center items-center">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-24 h-24 rounded-full border-4 border-brand-primary object-cover mb-4" />
+                        <h4 class="font-eb-garamond text-2xl font-bold">John Doe</h4>
+                        <p class="font-poppins mb-6">Marketing Director</p>
+                        <p class="max-w-2xl">"A truly exceptional legal firm. They handled my complex criminal case with discretion and immense skill. The communication was clear and constant, which put my mind at ease during a very stressful time. I am forever grateful for their help."</p>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="my-24 scroll-mt-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-eb-garamond text-5xl font-extrabold text-brand-dark-2">Frequently Asked Questions</h2>
+                <p class="pt-6 text-brand-dark-3">Below are answers to some common legal questions. For specific advice regarding your situation, please schedule a free consultation.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-8 mt-16 items-center">
+                <div class="flex-1 space-y-4">
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium font-eb-garamond text-brand-dark-2">
+                           1. What is the difference between civil and criminal law?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-brand-dark-3">Civil law deals with disputes between individuals or organizations, typically seeking compensation. Criminal law, on the other hand, involves the government prosecuting an individual for an act classified as a crime, with potential penalties including fines or imprisonment.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium font-eb-garamond text-brand-dark-2">
+                            2. How much does it cost to hire a lawyer?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-brand-dark-3">Legal fees vary greatly depending on the lawyer's experience, the complexity of the case, and the firm's billing structure (e.g., hourly, flat fee, contingency). We offer a free initial consultation to discuss your case and provide a clear fee structure.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium font-eb-garamond text-brand-dark-2">
+                            3. What should I bring to my first consultation?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-brand-dark-3">Bring all relevant documents related to your case, such as contracts, police reports, correspondence, and a timeline of events. Also, prepare a list of questions you have for the attorney. This will help make the consultation as productive as possible.</p>
+                        </div>
+                    </div>
+                     <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium font-eb-garamond text-brand-dark-2">
+                            4. Do I always need a lawyer to go to court?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-brand-dark-3">While you can represent yourself (pro se), it is highly advisable to have legal representation, especially in complex cases. An experienced lawyer understands legal procedures, rules of evidence, and can build a strong strategic argument on your behalf, significantly increasing your chances of a favorable outcome.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <img src="./images/faq.png" alt="FAQ" class="w-full h- object-cover rounded-lg">
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="my-24 scroll-mt-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-eb-garamond text-5xl font-extrabold text-brand-dark-2">Contact With Us</h2>
+                <p class="pt-6 text-brand-dark-3">Have a question or need to schedule your free consultation? Reach out to us through any of the methods below or use the contact form.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5">
+                    <div class="bg-base-200 p-8 text-center border border-gray-200">
+                        <i class="fa-solid fa-location-dot text-4xl text-brand-primary mb-4"></i>
+                        <h4 class="font-eb-garamond text-2xl font-bold">Address</h4>
+                        <p class="text-brand-dark-3">A108 Adam Street,<br>New York, NY 535022</p>
+                    </div>
+                    <div class="bg-base-200 p-8 text-center border border-gray-200">
+                        <i class="fa-solid fa-phone text-4xl text-brand-primary mb-4"></i>
+                        <h4 class="font-eb-garamond text-2xl font-bold">Call Us</h4>
+                        <p class="text-brand-dark-3">+88 01750 00 00 00<br>+88 01750 00 00 00</p>
+                    </div>
+                     <div class="bg-base-200 p-8 text-center border border-gray-200">
+                        <i class="fa-solid fa-envelope text-4xl text-brand-primary mb-4"></i>
+                        <h4 class="font-eb-garamond text-2xl font-bold">Email Us</h4>
+                        <p class="text-brand-dark-3">info@justice.com<br>support@justice.com</p>
+                    </div>
+                    <div class="bg-base-200 p-8 text-center border border-gray-200">
+                        <i class="fa-solid fa-clock text-4xl text-brand-primary mb-4"></i>
+                        <h4 class="font-eb-garamond text-2xl font-bold">Working Hours</h4>
+                        <p class="text-brand-dark-3">Mon-Fri: 9AM to 5PM<br>Sat-Sun: Closed</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <input type="text" placeholder="Your Name" class="input input-bordered w-full bg-base-200" />
+                    <input type="email" placeholder="Your Email" class="input input-bordered w-full bg-base-200" />
+                    <input type="text" placeholder="Subject" class="input input-bordered w-full bg-base-200" />
+                    <textarea class="textarea textarea-bordered w-full h-40 bg-base-200" placeholder="Your Message"></textarea>
+                    <button class="btn bg-brand-primary text-white text-lg font-semibold w-full hover:bg-[#a57b49]">Send Message</button>
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="footer bg-brand-dark-1 text-base-content p-10 mt-16">
+       <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-gray-300">
+        <nav>
+            <a class="btn btn-ghost text-2xl lg:text-3xl font-eb-garamond font-extrabold text-white p-0 hover:bg-transparent"><img src="https://i.ibb.co/L8y25XG/logo2.png" alt="Justice Logo" class="w-8 lg:w-10">Justice</a>
+            <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+        </nav>
+        <nav>
+            <h6 class="footer-title text-white font-eb-garamond text-xl">Usefull Link</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About Us</a>
+            <a class="link link-hover">Cases</a>
+            <a class="link link-hover">Blog</a>
+            <a class="link link-hover">Contact Us</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title text-white font-eb-garamond text-xl">Contact Now</h6>
+            <p>555 4th 5t NW, Washington <br>DC 20530, United States</p>
+            <p class="pt-2">+88 01750 000 000 <br>+88 01750 000 000</p>
+            <p class="pt-2">info@gmail.com <br>info@gmail.com</p>
+        </nav>
+        <form>
+            <h6 class="footer-title text-white font-eb-garamond text-xl">Subscribe</h6>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    <span class="label-text text-gray-300">Subscribe for our latest & Articles.</span>
+                </label>
+                <div class="join">
+                    <input type="text" placeholder="Email Address" class="input input-bordered join-item" />
+                    <button type="submit" class="btn bg-brand-primary join-item border-none text-white"><i class="fa-regular fa-paper-plane text-lg"></i></button>
+                </div>
+            </fieldset>
+        </form>
+       </div>
+    </footer>
 </body>
 </html>
